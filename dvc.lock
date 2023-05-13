@@ -27,29 +27,29 @@ stages:
       params.yaml:
         train.batch_size: 128
         train.dropout: 0.45
-        train.hidden_units: 64
+        train.hidden_units: 128
         train.lr: 0.001
         train.num_epochs: 2
     outs:
     - path: dvclive/metrics.json
       hash: md5
-      md5: 4ddabbc1960f44f0193443dd5acafe95
+      md5: 0c015f7ee290b340379aab707817c8da
       size: 54
     - path: dvclive/plots/metrics/accuracy.tsv
       hash: md5
-      md5: e3c7a4c22e20272402508743a6eb11ef
+      md5: 824f4c30f3c564729d4ee8a9cae61652
       size: 56
     - path: output/myfmmodel.keras
       hash: md5
-      md5: c68d74a190f01a117ab27b9ed92dae71
-      size: 3681312
+      md5: 8be855bccf1f683035eb92042ea387a2
+      size: 7324888
     - path: output/myfmmodel.tar.gz
       hash: md5
-      md5: a0a5c7cd2ae4ac4949baaa09361ecb2a
-      size: 3404328
+      md5: b036e79a96b11ec1605dc9f4dd2f85d6
+      size: 6797446
     - path: output/train_logs.csv
       hash: md5
-      md5: a2a6cb6e04eb5729451028fcd23e1669
+      md5: 2a67e78db70b3f335f144fa3d09edef6
       size: 101
   evaluate:
     cmd: python src/evaluate.py
@@ -60,8 +60,8 @@ stages:
       size: 54950285
     - path: output/myfmmodel.keras
       hash: md5
-      md5: c68d74a190f01a117ab27b9ed92dae71
-      size: 3681312
+      md5: 8be855bccf1f683035eb92042ea387a2
+      size: 7324888
     - path: src/evaluate.py
       hash: md5
       md5: d55658c1947e760905f8784a695033b4
@@ -69,14 +69,14 @@ stages:
     outs:
     - path: output/metrics.json
       hash: md5
-      md5: ca86ce522d74dfeb272f4f9124557f7c
+      md5: 7d0583eb9300eeff32e65965bb6497fa
       size: 61
     - path: output/predictions.json
       hash: md5
-      md5: 15b9370c7a79166779a81b0915928d0f
+      md5: eec599708fba122ec01d6ce3fe09327b
       size: 310000
     - path: output/test/samples_of_mispredicted_images/
       hash: md5
-      md5: addddda3ce4befb4c1c52edf61b9ee43.dir
-      size: 172753
+      md5: 6252c73470add1fb9bd5a052b7ace0a8.dir
+      size: 173724
       nfiles: 10
